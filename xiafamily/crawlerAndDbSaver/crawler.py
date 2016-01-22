@@ -21,10 +21,12 @@ def getMainPage():
         counter += 1
         f.write("%d\n" %counter)
         f.write("%s\n" %gender)
-        f.write(item.get_text().encode("utf-8"))
-        # f.write("%s\n" %item["href"])
-        # f.write(item["data-parent"])
-        f.write("\n\n")
+        for qqq in item.stripped_strings:
+            qqq += " "
+            f.write("%s" %qqq.encode("utf-8"))
+
+        # f.write(item.get_text().encode("utf-8"))
+        f.write("\n")
 
     f.close()
 
