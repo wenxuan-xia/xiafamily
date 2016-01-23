@@ -18,7 +18,7 @@ class familyMember(models.Model):
     gender = models.CharField(default="男", max_length=4)
     married = models.BooleanField(default=False)
     parent_id = models.IntegerField(default=0)
-    spouse_name = models.CharField(max_length="16", default="")
+    spouse_name = models.CharField(max_length=16, default="")
 
     education = models.TextField(null=True)
     careers = models.TextField(null=True)
