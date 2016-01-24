@@ -15,10 +15,10 @@ class familyMember(models.Model):
     belongs_to = models.CharField(null=True, max_length=16)
     oldsystem_id = models.IntegerField(default=0)
 
-    gender = models.CharField(default="男", max_length=4)
-    married = models.BooleanField(default=False)
-    parent_id = models.IntegerField(default=0)
-    spouse_name = models.CharField(max_length=16, default="")
+    gender = models.CharField(default="男", max_length=16)
+    married = models.BooleanField(default=False, null=False)
+    # parent_id = models.IntegerField(default=0)
+    spouse_name = models.CharField(max_length=16, default="-", null=False)
 
-    education = models.TextField(null=True)
-    careers = models.TextField(null=True)
+    education = models.TextField(null=False)
+    careers = models.TextField(null=False)

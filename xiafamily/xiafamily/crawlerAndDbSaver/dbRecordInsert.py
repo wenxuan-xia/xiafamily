@@ -18,21 +18,23 @@ def process():
         match = ""
         spouse = ""
         belongs = 0
+        married = False
         try:
             generation, name, match, spouse = whatelse.split()
             belongs = gen_recorder[int(generation) - 1]
             gen_recorder[int(generation)] = i + 1
+            married = True
         except:
             generation, name = whatelse.split()
             belongs = gen_recorder[int(generation) - 1]
             gen_recorder[int(generation)] = i + 1
-        # print gen_recorder\
+        # print gen_recorder
         # print id
         # print gender
         # print whatelse
         # print generation, name
 
-        adminFM = FM(oldsystem_id=id, gender=gender, name=name, spouse_name=spouse, generation=generation, belongs_to = belongs)
+        adminFM = FM(oldsystem_id=id, gender=gender, name=name, spouse_name=spouse, generation=generation, belongs_to = belongs, married=married)
         adminFM.save()
     f.close()
 
