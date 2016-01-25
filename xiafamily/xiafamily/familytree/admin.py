@@ -3,7 +3,7 @@ from .models import *
 # Register your models here.
 
 class familyMemberAdmin(admin.ModelAdmin):
-    list_display = ["oldsystem_id", "name", "gender", "generation", "belongs_to"]
+    list_display = ["oldsystem_id", "name", "gender", "generation", "belongs_to", "house"]
 
 
 admin.site.register(familyMember, familyMemberAdmin)
