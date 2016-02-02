@@ -6,6 +6,5 @@ from .models import familyMember as fm
 
 
 def index(request):
-    a = fm.objects.all()
-    print a
-    return render(request, 'index.html', {} )
+    member = fm.objects.all()
+    return render(request, 'index.html', {'member' : member} )

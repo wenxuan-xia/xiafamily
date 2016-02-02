@@ -16,8 +16,9 @@ Including another URLconf
 from django.conf.urls import url, patterns, include
 from django.contrib import admin
 import familytree.views as familytree
-
+import familytree.api as familyapi
 urlpatterns = [
     url(r'^$', familytree.index, name='index'),
     url(r'^admin/', admin.site.urls),
+    url(r'^getWholeFamilyMembers$', familyapi.getWholeFamilyMembers, name="api")
 ]
