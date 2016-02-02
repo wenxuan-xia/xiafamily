@@ -2,7 +2,7 @@ function find_child(oldsystem_id, member, prefix) {
   var str = ""
   var flag = 0
   // console.log(oldsystem_id)
-  console.log(member.length)
+  // console.log(member.length)
   for (var i=0; i<member.length; i++) {
     if (member[i].belongs_to == oldsystem_id) {
       // console.log(member[i])
@@ -61,7 +61,7 @@ function find_starter(member) {
     if (member[i].generation == 1) {
       counter += 1
       str += "<div class='col-sm-6 col-md-4 fang'>"
-      str += "<div class='MainMenu'>"
+      str += "<div id='MainMenu'>"
       str += "<div class='list-group panel'>"
       str += "<div class='list-group-item list-group-item-success gen1'>"
       str += "<a href='./#"+counter+"' data-toggle='collapse' data-parent='#MainMenu'><span class='fang-num'>"+member[i].house+"</span>"+member[i].name+"</a>"
