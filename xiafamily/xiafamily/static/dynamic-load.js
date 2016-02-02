@@ -40,8 +40,12 @@ function find_child(oldsystem_id, member, prefix) {
         str += "<span class='info'>配&nbsp;&nbsp;" + member[i].spouse_name
         str += "</span>"
       }
+      childstr = find_child(member[i].oldsystem_id, member, prefix + "-" + (i+1))
+      if (childstr != "") {
+        str += "<i class='fa fa-plus'></i>"
+      }
       str += "</a>"
-      str += find_child(member[i].oldsystem_id, member, prefix + "-" + (i+1))
+      str += childstr
     }
   }
   if (flag == 1) {
